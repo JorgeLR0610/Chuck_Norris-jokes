@@ -1,0 +1,20 @@
+// See /docs/jokes.proto
+syntax = "proto3";
+
+package jokes;
+
+option csharp_namespace = "ChuckNorrisClient";
+
+service ChuckNorris {
+    rpc GetJoke (JokeRequest) returns (JokeResponse);
+}
+
+message JokeRequest {
+  string category = 1;
+}
+
+message JokeResponse{
+    string joke = 1;
+    bool success = 2;
+    string error_mesage = 3;
+}
