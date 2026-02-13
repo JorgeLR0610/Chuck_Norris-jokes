@@ -16,5 +16,5 @@ message JokeRequest {
 message JokeResponse{
     string joke = 1;
     bool success = 2;
-    string error_mesage = 3;
+    string error_message = 3;
 }
